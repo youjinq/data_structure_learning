@@ -1,6 +1,6 @@
 // binatry search tree- in hierachy data structure- fast search,insert and delete-,amy recusion here
 
-//  new node
+//  new node-left,value,right
 class Node {
   constructor(value) {
     this.value = value;
@@ -9,7 +9,7 @@ class Node {
   }
 }
 
-// count
+// count - create root
 class BST {
   constructor(value) {
     this.root = new Node(value);
@@ -95,7 +95,7 @@ class BST {
   }
 
   // depth first search - branc by branch
-  // return  left-root-right
+  // return all in order of  left-root-right
   dfsInOder() {
     let result = [];
 

@@ -1,6 +1,6 @@
 // singly linked list - node to node-  next & prev important ; linkedlist- head and tail--
 // one door one node to behind ; better push,search,delte
-// node shape- value, next, repv
+// node shape- value, next, rep; this.head like a red scqure for select
 
 
 // singly linked_list - push; searchNode; delete   
@@ -20,85 +20,7 @@ class LinkedList {
     this.count = 0;
   }
 
-  // append node to its back
-  // append(value){
-  //     // if list is empty
-  //     if(!this.tail){
-  //         this.head = this.tail = new Node(value)
-  //     } else {
-  //         // make a new variable and link back to new
-  //         let oldTail = this.tail;
-  //         this.tail = new Node(value);
-  //         oldTail.next =  this.tail;
-  //         this.tail.prev = oldTail;
-  //     }
 
-  // }
-
-  // // add to front
-  // prepend(){
-  //     if(!this.head){
-  //         this.head = this.tail = new Node(value)
-  //     } else {
-  //         // make a new variable and link back to new
-  //         let oldHead = this.head;
-  //         this.head = new Node(value);
-  //         oldHead.prev =  this.head;
-  //         this.head.next = oldHead;
-  //     }
-  // }
-
-  // deleteHead(){
-  //     if(!this.head){
-  //         return null
-  //     } else {
-  //         // make a new variable and link back to new
-  //         let removeHead = this.head;
-
-  //         // deal with the head node
-  //         if(this.head === this.node){
-  //             this.head = this.tail = null
-  //         } else {
-  //             this.head = this.head.next;
-  //             this.head.prev= null
-  //         }
-
-  //         return removeHead.value;
-  //     }
-  // }
-
-  // deleteTail(){
-  //     if(!this.tail){
-  //         return null
-  //     } else {
-  //         // make a new variable and link back to new
-  //         let removeTail = this.tail;
-
-  //         // if that is the only node in list
-  //         if(this.head === this.node){
-  //             this.head = this.tail = null
-  //         } else {
-  //             this.tail = this.tail.prev;
-  //             this.tail.next= null
-  //         }
-
-  //         return removeTail.value;
-  //     }
-  // }
-
-  // // search from head,slow
-  // search(value){
-  //     let currentNode= this.head;
-
-  // while(currentNode){
-  //     if(currentNode.value == value){
-  //         return currentNode;
-  //     }
-
-  //     currentNode= currentNode.next;
-  // }
-  // return null;
-  // }
 
   // push node to end
   append(value) {
