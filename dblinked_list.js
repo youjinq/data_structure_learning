@@ -20,7 +20,7 @@ class DBLinkedList {
     this.count = 0;
   }
 
-  // append node to its back
+  // append node to its back- love this
   append(value){
       // if list is empty
       if(!this.tail){

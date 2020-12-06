@@ -95,7 +95,7 @@ class BST {
   }
 
   // depth first search - branc by branch
-  // return all in order of  left-root-right
+  // return [] in order of  left-root-right
   dfsInOder() {
     let result = [];
 
@@ -152,6 +152,8 @@ class BST {
     // breadth width search
 
     let result = [];
+
+    // push node to queue
     let queue = [];
 
     queue.push(this.root);
@@ -159,8 +161,10 @@ class BST {
     while (queue.length) {
       // -1 in queue
       let currentNode = queue.shift();
+      // result
       result.push(currentNode.value);
 
+      // queue list
       if (currentNode.left) {
         queue.push(currentNode.left);
       }
@@ -192,11 +196,11 @@ bst.min();
 
 bst.max();
 
-console.log(bst.contains(2));
+// console.log(bst.contains(2));
 
-console.log(bst.dfsInOder());
-console.log(bst.dfsPreOrder());
-console.log(bst.dfsPostOrder());
+// console.log(bst.dfsInOder());
+// console.log(bst.dfsPreOrder());
+// console.log(bst.dfsPostOrder());
 
 console.log(bst.bfs());
 

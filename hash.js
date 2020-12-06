@@ -21,6 +21,9 @@ class HashTable{
 
         // this.bucket=[];
         this.bucket = Array(this.size);
+        // this.bucket = Array();
+        
+
 
         // use map or array here
         for(let i=0; i< this.bucket.length;i++){
@@ -37,13 +40,12 @@ class HashTable{
     put(key,value){
         let idx= hash(key,this.size);
 
-        this.bucket[idx].set(key,value);
+        // this.bucket[idx]= new Map()
+
+        this.bucket[idx].set( { [idx] : key},value);
 
         // size to check length of map- one value for a map- u can make double array
-        // if(this.bucket[idx].size == 0){
-        //     this.bucket[idx].set(key,value);
 
-        // }
     }
 
     remove(key){
@@ -69,6 +71,8 @@ table.put('mrt','mecury');
 
 console.log(table.get('justice'));
 
-table.print();
+// table.print();
+
+// console.log(table.bucket[19]);
 
 

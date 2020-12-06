@@ -3,7 +3,7 @@
 // dfs- recursive function
 // bfs -enqueue and dequeue
 
-// GIVEN
+// GIVEN-undirecterd
 const airports = 'PHX BKK OKC JFK LAX MEX EZE HEL LOS LAP LIM'.split(' ');
 
 const routes = [

@@ -1,7 +1,7 @@
 // last apply on object
 
 // see how big the stack with size
-// exp outpu   1: cat; 2: fish - 1 door
+// exp outpu  { 1: cat; 2: fish - 1 door}
 
 class Stack{
     constructor(){

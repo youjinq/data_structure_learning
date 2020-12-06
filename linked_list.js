@@ -115,6 +115,17 @@ class LinkedList {
   size() {
     return this.count;
   }
+
+  toArray(){
+    let element =[];
+    let current = this.head;
+    while(current){
+      element.push(current);
+      current = current.next;
+    }
+
+    return element;
+  }
 }
 
 let list = new LinkedList();
@@ -122,9 +133,15 @@ let list = new LinkedList();
 list.append(1);
 list.append(2);
 list.append(3);
-list.prepend(2);
+list.append(2);
+
 
 // console.log(list.removeAt(1));
-console.log(list.size());
 console.log(list);
+console.log(list.toArray());
+
+x= list.toArray();
+
+console.log(x[2]);
+
 
