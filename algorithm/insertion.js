@@ -1,4 +1,6 @@
-// insertion algorithm-for with i=1; current save i value; j as index while=> swap to right; last put current at j+1   O(n)
+// First example O(n^2)
+
+// assume the first is sorted compare first 2 element first, bigger copy to right,  last return  smaller value(leftmost+1 because minimal value j stop at -1)
 
 const insertionSort=(array)=>{
     for(let i =1; i < array.length;i++){
@@ -13,6 +15,7 @@ const insertionSort=(array)=>{
             j--;
         }   
 
+        // return current at last
         array[j+1]=current;
     }
     return array;
