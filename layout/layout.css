@@ -1,0 +1,72 @@
+.center {
+    width: 100%;
+    height: 500px;
+    background: lightgray;
+}
+.left {
+    width: 200px;
+    height: 500px;
+    background: lightpink;
+}
+.right {
+    width: 300px;
+    height: 500px;
+    background: lightgreen; 
+}
+
+/* float */
+.center {
+    float: left;
+}
+.left {
+    float: left;
+}
+.right {
+    float: left;
+}
+
+/* clear fix */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* float to one line; because one are float element, margin-left work - -100% and -300px with its size*/ 
+.left {
+    margin-left: -100%;
+}
+.right {
+    margin-left: -300px;
+}
+
+/* shengbei - push to center , move left and right to its place */
+/* .main { 
+    margin-left: 200px;
+    margin-right: 300px;
+}
+
+.left {
+    position: relative;
+    left: -200px;
+}
+.right {
+    position: relative;
+    right: -300px;
+} */
+
+/*  */
+
+
+/* shuangfeiyi- at layout2.html - better than shengbei bcs middle can remove when smaller, whereas left and right will not*/
+
+.inner {
+    /* 为了突出显示 inner 元素，给它加上了 height 和 border 以及 上margin */
+    height: 300px;
+    border: 1px solid red;
+    margin-top: 10px;
+
+    /* 以下是设置的 margin */
+    margin-left: 200px;
+    margin-right: 300px;
+}

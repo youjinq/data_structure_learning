@@ -71,7 +71,7 @@ table.put('mrt','mecury');
 
 console.log(table.get('justice'));
 
-// table.print();
+table.print();
 
 // console.log(table.bucket[19]);
 

@@ -72,7 +72,8 @@ class LinkedList{
         if(!this.head){
             return;
         }
-
+        
+        let curNode = this.head;
         while(curNode){
 
             if(curNode.value === value){
