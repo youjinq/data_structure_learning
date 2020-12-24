@@ -12,6 +12,8 @@ class Node {
 // count - create root
 class BST {
   constructor(value) {
+    // this.root = null; - for add(data)
+    
     this.root = new Node(value);
     this.count = 1;
   }
@@ -153,9 +155,10 @@ class BST {
 
     let result = [];
 
-    // push node to queue
+    // push node to queue list
     let queue = [];
 
+// if root !==null;
     queue.push(this.root);
 
     while (queue.length) {
@@ -176,6 +179,85 @@ class BST {
 
     return result;
   }
+
+
+add(data){
+  const node = this.root;
+  if(node === null) {
+    this.root = new Node(data);
+  } else {
+    const searchTree =function(node){
+      if(data < node.value){
+        
+        if(node.left ===null){
+          node.left = new Node(data);
+          return;
+        } else {
+             return searchTree(node.left);
+        }
+
+      } else if (data > node.value){
+                if(node.right ===null){
+          node.right = new Node(data);
+          return;
+        } else {
+             return searchTree(node.right);
+        } 
+      } else {
+        return null;
+      }
+    }
+
+    searchTree(node);
+  }
+
+
+// blurr with this
+ remove(value) {
+    const removeNode = function(node, value) {
+      if (node == null) {
+        return null;
+      }
+      // if found value on the node value -4 options within
+      if (value == node.value) {
+        // node has no children 
+        if (node.left == null && node.right == null) {
+          return null;
+        }
+        // node has no left child 
+        if (node.left == null) {
+          return node.right;
+        }
+        // node has no right child 
+        if (node.right == null) {
+          return node.left;
+        }
+
+        // node has two children 
+        var tempNode = node.right;
+        while (tempNode.left !== null) {
+          tempNode = tempNode.left;
+        }
+        
+        node.value = tempNode.value;
+        node.right = removeNode(node.right, tempNode.value);
+        return node;
+
+      } else if (value < node.value) {
+        node.left = removeNode(node.left, value);
+        return node;
+
+      } else {
+        node.right = removeNode(node.right, value);
+        return node;
+      }
+    }
+
+
+    this.root = removeNode(this.root, data);
+  }
+
+  
 }
 
 const bst = new BST(15);

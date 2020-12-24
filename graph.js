@@ -42,7 +42,7 @@ function addEdge(origin, destination) {
 airports.forEach(addNode);
 
 // ...route to destruct two args
-routes.forEach(route => addEdge(...route))
+routes.forEach(route => addEdge(...route));
 
 console.log(adjacencyList);
 // graph search algorithm
